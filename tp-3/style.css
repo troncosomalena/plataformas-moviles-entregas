@@ -12,22 +12,21 @@ body {
 
 		h1 {
 			font-size: 2rem;
-			text-align: left;
+			text-align: center;
 		}
 
 		p {
-			font-family: sans-serif;
+			font-family: serif;
 		}
 
 		#primer-parrafo {
 			font-size: 1.3rem;
-			background-color: #eec;
+			background-color: #CEE;
 		}
 
-		p.importante em {
-			font-weight: bold;
-			color: #144;
-		}
+		#primer-parrafo em {
+			color: #933;
+			}
 
 		p.novelas a {
 			outline: none;
@@ -38,9 +37,21 @@ body {
 			background-color: #ccd;
 		}
 
-		body p.fuente.parrafo {
-			color: #bbb !important;
-			font-size: 0.9rem;
-			opacity: 50%;
-			text-align: center;
+		p.fuente {
+			opacity: 100%;
+			color:#000;
 		}
+
+        a {
+			outline: 1px solid #333
+		}
+
+p:not([ïd]) {
+	background-color: rgba(190, 120, 240, 0.6);
+}
+
+.complicado {
+	font-weight: bold;
+	color: #C62;
+	}
+			
