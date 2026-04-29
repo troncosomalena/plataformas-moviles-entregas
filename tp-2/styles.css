@@ -1,0 +1,65 @@
+body {
+    background-color: #222;
+    color: #ee6;
+}
+h1 {
+    text-align: center;
+}
+p {
+    font-family: sans-serif;
+}
+h1, h2, h3 {
+    color: #eee;
+}
+strong {
+    border-bottom: 1px solid white;
+}
+.the-force {
+    background-color: #444;
+    font-weight: bold;
+}
+.light-side {
+    color: #66f;
+}
+
+.dark-side {
+    color: #f33;
+}
+#og-trilogy {
+    list-style-type: circle;
+}
+.movies-list:nth-of-type(2) {
+    padding-left: 20px;
+}
+.movies-list:last-of-type li:last-child {
+    margin-top: 10px;
+}
+
+/* Bonus Tracks */
+/* 1. Todos los titulos en mayuscula */
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+/* 2. Primera linea del primer parrafo en color #efe */
+p:first-of-type::first-line {
+    color: #efe;
+}
+/* 3. Cambio de color del titulo principal al pasar el mouse */
+h1:hover {
+    color: #ff0;
+}
+/* 4. Links visitados en color gris */
+a:visited {
+    color: gray;
+}
+/* 5. Links sin atributo href en cursiva */
+a:not([href]) {
+    font-style: italic;
+}
+/* 6. Colores alternados en los elementos de los listados de películas */
+.movies-list li:nth-child(odd) {
+    background-color: #111;
+}
+.movies-list li:nth-child(even) {
+    background-color: #333;
+}
