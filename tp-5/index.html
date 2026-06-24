@@ -1,60 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de Versiones con Git</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
-
 <body>
-    <nav class="navbar navbar-dark bg-dark mb-4">
-        <div class="container-fluid">
-            <span class="navbar-brand">Git Info</span>
+
+  
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Git Docs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Comparación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Formulario</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div class="container">
-        <h1 class="text-center">Control de Versiones con Git</h1>
 
-        <p class="fs-5">
-            <strong>Git</strong> es un sistema de control de versiones distribuido, ampliamente utilizado en el
-            desarrollo
-            de software moderno. Fue creado para gestionar proyectos de forma rápida, eficiente y colaborativa.
-        </p>
+    <div class="container mt-4">
 
-        <h2>Comandos más populares de Git</h2>
-        <div class="shadow p-3 mb-4">
-            <ul>
-                <li><code>git init</code> - Inicializa un nuevo repositorio Git en el directorio actual. Este comando
-                    crea un
-                    repositorio vacío.</li>
-                <li><code>git clone [url]</code> - Clona un repositorio remoto en tu máquina local. Ejemplo:
-                    <code>git clone https://github.com/usuario/repositorio.git</code>.
-                </li>
-                <li><code>git status</code> - Muestra el estado del repositorio: archivos modificados, nuevos archivos
-                    no
-                    rastreados, cambios preparados para el commit, etc.</li>
-                <li><code>git add [archivo]</code> - Agrega un archivo o cambios específicos al área de preparación
-                    (staging
-                    area) para el commit.</li>
-                <li><code>git commit -m "[mensaje]"</code> - Crea un commit con los archivos añadidos al área de
-                    preparación,
-                    agregando un mensaje descriptivo.</li>
-                <li><code>git push</code> - Sube los cambios locales al repositorio remoto. Generalmente se usa después
-                    de un
-                    commit para actualizar el repositorio remoto.</li>
-                <li><code>git pull</code> - Obtiene y combina los cambios del repositorio remoto al local. Equivalente a
-                    <code>git fetch</code> seguido de <code>git merge</code>.
-                </li>
-                <li><code>git checkout [rama]</code> - Cambia a una rama específica del repositorio. Si la rama no
-                    existe, se
-                    puede crear con <code>git checkout -b [rama]</code>.</li>
-            </ul>
+        <h1 class="text-center mb-3">Control de Versiones con Git</h1>
+
+        
+        <p class="fs-5"><strong>Git</strong> es un sistema de control de versiones distribuido, ampliamente utilizado en el desarrollo de software moderno. Fue creado para gestionar proyectos de forma rápida, eficiente y colaborativa.</p>
+
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong>¿Sabías?</strong> Git fue creado por Linus Torvalds en 2005 para el desarrollo del kernel de Linux.
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
 
-        <h2>Comparación con otros sistemas</h2>
-        <table class="table table-hover">
+        <h2 class="mt-4">Comandos más populares de Git</h2>
+        <ul class="list-group shadow my-3">
+            <li class="list-group-item"><code>git init</code> — Inicializa un nuevo repositorio Git en el directorio actual. Este comando crea un repositorio vacío.</li>
+            <li class="list-group-item"><code>git clone [url]</code> — Clona un repositorio remoto en tu máquina local. Ejemplo: <code>git clone https://github.com/usuario/repositorio.git</code>.</li>
+            <li class="list-group-item"><code>git status</code> — Muestra el estado del repositorio: archivos modificados, nuevos archivos no rastreados, cambios preparados para el commit, etc.</li>
+            <li class="list-group-item"><code>git add [archivo]</code> — Agrega un archivo o cambios específicos al área de preparación (staging area) para el commit.</li>
+            <li class="list-group-item"><code>git commit -m "[mensaje]"</code> — Crea un commit con los archivos añadidos al área de preparación, agregando un mensaje descriptivo.</li>
+            <li class="list-group-item"><code>git push</code> — Sube los cambios locales al repositorio remoto. Generalmente se usa después de un commit.</li>
+            <li class="list-group-item"><code>git pull</code> — Obtiene y combina los cambios del repositorio remoto al local. Equivalente a <code>git fetch</code> seguido de <code>git merge</code>.</li>
+            <li class="list-group-item"><code>git checkout [rama]</code> — Cambia a una rama específica. Si no existe, se puede crear con <code>git checkout -b [rama]</code>.</li>
+        </ul>
+
+       
+        <div class="row g-3 my-2">
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"> Ramas</h5>
+                        <p class="card-text">Las ramas (branches) permiten trabajar en nuevas funcionalidades sin afectar el código principal. Son una de las características más poderosas de Git.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"> Merge</h5>
+                        <p class="card-text">El merge combina los cambios de una rama en otra. Git intenta hacer esto automáticamente, pero a veces pueden surgir conflictos que hay que resolver manualmente.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">☁️ Repositorios remotos</h5>
+                        <p class="card-text">Plataformas como GitHub, GitLab o Bitbucket permiten alojar repositorios en la nube para colaborar con otros desarrolladores de todo el mundo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   
+        <h2 class="mt-5">Comparación con otros sistemas</h2>
+        <table class="table table-bordered table-striped table-hover mt-3">
             <thead class="table-dark">
                 <tr>
                     <th>Sistema</th>
@@ -86,32 +111,120 @@
             </tbody>
         </table>
 
-        <h2>¿Ya usaste Git?</h2>
-        <p>Completá el siguiente formulario para compartir tu experiencia:</p>
-
-        <form class="form">
-            <label for="nombre">Tu nombre:</label>
-            <input type="text" id="nombre" name="nombre" class="form-control">
-
-            <label for="experiencia">¿Qué usás más?</label><br>
-            <select id="experiencia" name="experiencia" class="form-select">
-                <option value="git">Git</option>
-                <option value="github">Git + GitHub</option>
-                <option value="otro">Otro sistema</option>
-                <option value="ninguno">Todavía no uso ninguno</option>
-            </select>
-
-            <input type="submit" value="Enviar" class="btn btn-danger mt-2">
-        </form>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-        <button class="btn btn-warning mb-3"
-            onclick="document.getElementById('miAlerta').classList.remove('d-none')">Mostrar alerta</button>
-        <div id="miAlerta" class="alert alert-warning d-none" role="alert">
-            Este es un mensaje de alerta de Bootstrap.
+  
+        <h2 class="mt-5">Conceptos clave</h2>
+        <div class="accordion my-3" id="acordeon">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc1">
+                        ¿Qué es un commit?
+                    </button>
+                </h2>
+                <div id="acc1" class="accordion-collapse collapse show" data-bs-parent="#acordeon">
+                    <div class="accordion-body">
+                        Un commit es una instantánea del estado de tu proyecto en un momento determinado. Cada commit tiene un identificador único (hash) y un mensaje descriptivo.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc2">
+                        ¿Qué es el staging area?
+                    </button>
+                </h2>
+                <div id="acc2" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+                    <div class="accordion-body">
+                        El staging area (área de preparación) es una zona intermedia donde se van acumulando los cambios que se incluirán en el próximo commit, usando <code>git add</code>.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc3">
+                        ¿Qué diferencia hay entre Git y GitHub?
+                    </button>
+                </h2>
+                <div id="acc3" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+                    <div class="accordion-body">
+                        Git es el sistema de control de versiones que corre localmente en tu computadora. GitHub es una plataforma web que permite alojar repositorios Git en la nube y colaborar con otros.
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </div>
-</body>
+     
+        <h2 class="mt-5">¿Ya usaste Git?</h2>
+        <p>Completá el siguiente formulario para compartir tu experiencia:</p>
 
+        <form class="mb-4">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Tu nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="experiencia" class="form-label">¿Qué usás más?</label>
+                <select id="experiencia" name="experiencia" class="form-select">
+                    <option value="git">Git</option>
+                    <option value="github">Git + GitHub</option>
+                    <option value="otro">Otro sistema</option>
+                    <option value="ninguno">Todavía no uso ninguno</option>
+                </select>
+            </div>
+
+          
+            <button type="submit" class="btn btn-success">Enviar</button>
+            <button type="button" class="btn btn-outline-secondary ms-2" data-bs-toggle="modal" data-bs-target="#modalConfirm">
+                Ver aviso antes de enviar
+            </button>
+        </form>
+
+    </div>
+
+    <div class="modal fade" id="modalConfirm" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aviso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Tus respuestas son anónimas y solo se usan con fines educativos. ¡Gracias por participar!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+        <div id="toastEnvio" class="toast align-items-center text-bg-success border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">
+                     ¡Formulario enviado correctamente!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-3">
+        <div class="container d-flex justify-content-between">
+            <span>Control de Versiones con Git</span>
+            <span>Guía práctica para developers</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+     
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const toast = new bootstrap.Toast(document.getElementById('toastEnvio'));
+            toast.show();
+        });
+    </script>
+</body>
 </html>
